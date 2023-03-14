@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-lg-6 shadow p-4">
+            <h3>Register</h3>
+            <form method='post'>{% csrf_token %}
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" name='email' class="form-control" id="email" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name='password' class="form-control" id="password">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Register</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+
+        <div class="col-lg-6">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/12/a7/6e/hotel-facade.jpg?w=700&h=-1&s=1" class='shadow'>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
